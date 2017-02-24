@@ -35,9 +35,15 @@
     whichever is smaller
     - if viewport is 1433, img will be 638px (native width)
     - viewport 1122, img 500
-    - viewport 673, img 300     -->
-      <img srcset="images/yellow-iguana-eating-fuit.jpg 638w, images/yellow-iguana-eating-fuit500.jpg 500w, images/yellow-iguana-eating-fuit300.jpg 300w"
-        sizes="(max-width: 673px) 300, (max-width: 1122) 500px, (min-width: 1433px) 638px"
+    - viewport 673, img 300 
+
+I used this formula to figure out which widths would match up with each of my image sizes (example for image at 300px):
+44.55 / 100 = 300 / x
+But you could also just resize your browser, and via dev console note the width of the image
+at several browser widths, then figure out the percentage of the viewport that the image is. 
+-->
+      <img srcset="images/yellow-iguana-eating-fruit.jpg 638w, images/yellow-iguana-eating-fruit500.jpg 500w, images/yellow-iguana-eating-fruit300.jpg 300w"
+        sizes="(max-width: 673px) 300px, (max-width: 1122) 500px, (min-width: 1433px) 638px"
         src="images/yellow-iguana-eating-fuit.jpg"
         alt="yellow iguana eating fruit">
       <figcaption>Iguanas Love Fruit</figcaption>
@@ -57,7 +63,7 @@
         Sign up for our email newsletter:
         <input type="email" name="email">
       </label>
-      <input type="submit" value="Sign Up"
+      <input type="submit" value="Sign Up">
     </form>
   </footer>
 </div>
