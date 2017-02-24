@@ -1,0 +1,17 @@
+nav, footer, video, figcaption { 
+  display: none; 
+}
+
+a[href^="http://"]:after, a[href^="https://"]:after {
+  content: "  (" attr(href) ")";
+  font-size: 80%;
+}
+
+.container, article { 
+  width: 100%;
+}
+
+figure {
+  margin-right: 2rem;
+  float: left;
+}
