@@ -62,6 +62,18 @@ nav li {
   font-weight: lighter;
 }
 
+/* In smaller contexts, stack flex items in a column */
+@media (max-width: 615px){
+  nav ul {
+    flex-direction: column;
+      align-items: center;
+  }
+  nav li {
+    /* TODO: This would look nicer if it was same width as article */
+    width: 80%;
+  }
+}
+
 nav li.active {
   background-color: rgba(102, 196, 58, 0.4);
 }
@@ -88,6 +100,30 @@ article figcaption {
 article small {
   text-align: right;
 }
+/* Reduce white space on small screens. Must be after styles for both .container and article,
+so it overrides in any conflict. */
+@media (max-width: 500px) {
+  body {
+    padding: 1em;
+  }
+  .container {
+    width: 97%; 
+  }
+  article {
+    width: 90%;
+  }
+}
+
+/* In huge contexts, limit the width of the article so it remains readable, 
+limit width of container so that nice gradient is more visible */
+@media (min-width: 1300px) {
+  .container {
+    width: 1070px; 
+  }
+  article {
+   width: 800px; 
+  }
+}
 
 footer {
   text-align: center;
@@ -102,4 +138,11 @@ footer {
 footer form {
   margin-left: 2rem;
   display: inline;
+}
+
+/* Don't let form get all crunched up in smaller contexts */
+@media (max-width: 1150px) {
+  footer form {
+    display: block;
+  }
 }

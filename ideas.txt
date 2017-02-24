@@ -1,0 +1,9 @@
+Class suggested ideas for how this site could be improved with media queries: 
+
+- nav text starts overlapping (<615px)
+- font size is way too small on small device size
+- on small devices, too much blank space - less gradient bg needed on smaller sizes
+- footer text breaks in weird spots in small widths, form looks funky- could fix by setting minimum font size, maybe reset form to "display: block"
+- on small sizes, horizontal scrolling is required to see text around form, when you're trying to fill out form
+- at 400px w, submit moves under text field - might be ok, might benefit from break between label & input 
+- figcaption text wraps at 350px
